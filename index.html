@@ -95,35 +95,14 @@ function handleComplete(evt,comp) {
             width: 100%;
             height: 100%;
         }
-    #game_wrapper {
-    width: 100%;
-    height: 100%;
-}
-
-@media only screen and (orientation: portrait) {
-    #game_wrapper {
-        transform: rotate(-90deg);
-        transform-origin: left top;
-        width: 100vh;
-        height: 100vw;
-        overflow-x: hidden;
-        position: absolute;
-        top: 100%;
-        left: 0;
-    }
-}
-
-</style>
+    </style>
 </head>
 
 <body onload="init();">
-    <div id="game_wrapper">
-        <div id="animation_container">
-            <canvas id="canvas"></canvas>
-            <div id="dom_overlay_container"></div>
-        </div>
+    <div id="animation_container">
+        <canvas id="canvas"></canvas>
+        <div id="dom_overlay_container"></div>
     </div>
 </body>
-
 
 </html>
