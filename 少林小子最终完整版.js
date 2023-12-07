@@ -930,31 +930,3 @@ an.handleSoundStreamOnTick = function(event) {
 })(createjs = createjs||{}, AdobeAn = AdobeAn||{});
 var createjs, AdobeAn;
 
-window.addEventListener('resize', resizeGame, false);
-window.addEventListener('orientationchange', resizeGame, false);
-
-function resizeGame() {
-    var gameArea = document.getElementById('game_wrapper');
-    var widthToHeight = 4 / 3;
-    var newWidth = window.innerWidth;
-    var newHeight = window.innerHeight;
-    var newWidthToHeight = newWidth / newHeight;
-
-    if (newWidthToHeight > widthToHeight) {
-        newWidth = newHeight * widthToHeight;
-        gameArea.style.height = newHeight + 'px';
-        gameArea.style.width = newWidth + 'px';
-    } else {
-        newHeight = newWidth / widthToHeight;
-        gameArea.style.width = newWidth + 'px';
-        gameArea.style.height = newHeight + 'px';
-    }
-
-    gameArea.style.marginTop = (-newHeight / 2) + 'px';
-    gameArea.style.marginLeft = (-newWidth / 2) + 'px';
-}
-
-window.onload = function() {
-    init();
-    resizeGame();
-}
